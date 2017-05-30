@@ -33,7 +33,8 @@ return [
            'alg' => 'HS256',
            'typ' => 'JWT'
         ],
-    'secret_key' => 'vamaker.2014', 
+    'secret_key' => 'vamaker.2014',
+    'exp_time' => '7200', 
     ],
 
     'goods_link_page' =>[
@@ -42,6 +43,7 @@ return [
 
     'api_list' => [
          'goods-link-manage',
+         'user',
     ]
 
 

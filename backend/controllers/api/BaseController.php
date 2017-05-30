@@ -25,32 +25,75 @@ class BaseController extends Controller
     public $jsonObj;
     public $token = null;
     public function init(){
-    	header('Access-Control-Allow-Origin: *');
-        // 如果是get请求直接返回，不进行权限验证
+    	$this->make_cors();
         if (Yii::$app->request->isPost) {
             $content = file_get_contents("php://input");
             $this->jsonObj = json_decode($content, TRUE);
-            $controller = $this->id;
-            $action = explode('/',$controller);
-            if(count($action) == 2){
-                $action = $action[1];
-            }
-            if(in_array($action,\Yii::$app->params['api_list'])){
-                $post = $this->jsonObj;
-                if(isset($post['token'])) $token = $post['token'];
-                if(empty($token)){
-                    $jwt = $this->getJWT();
-                    if($jwt){
-                        $this->token = $jwt;
-                    }else{
-                        $this->jsonReturn(['status'=>0,'msg'=>'权限验证失败!']);
-                    }
-                }else{
-                    $checkToken = $this->findIdentityByAccessToken($token);
-                    if(!$checkToken) $this->jsonReturn(['status'=>0,'msg'=>'权限验证失败!']);
-                }
-                
-            }
         }
+        $controller = $this->id;
+        $action = explode('/',$controller);
+        if(count($action) == 2){
+            $action = $action[1];
+        }
+        $header = getallheaders();
+        if(in_array($action,\Yii::$app->params['api_list'])){
+            if(isset($header['Authorization'])){
+                $token = $header['Authorization'];
+                $tArr = explode(' ', $token);
+                $token = $tArr[1];
+            }
+            if(empty($token)){
+                $jwt = $this->getJWT();
+                if($jwt){
+                    $this->token = $jwt;
+                }else{
+                    header('HTTP/1.1 401 Unauthorized'); 
+                }
+            }else{
+                $checkToken = $this->findIdentityByAccessToken($token);
+                $msg = (String) $checkToken;
+                if($checkToken!='true'){
+                    $this->jsonReturn(['status'=>0,'msg'=>$checkToken]);
+                }
+            }
+            
+        }
+    }
+
+    function make_cors($origin = '*') {
+ 
+        $request_method = $_SERVER['REQUEST_METHOD'];
+     
+        if ($request_method === 'OPTIONS') {
+     
+            header('Access-Control-Allow-Origin:'.$origin);
+            header('Access-Control-Allow-Headers:authorization,content-type');
+            header('Access-Control-Allow-Credentials:true');
+            header('Access-Control-Allow-Methods:GET,HEAD,PUT,PATCH,POST,DELETE');
+     
+            header('Access-Control-Max-Age:1728000');
+            header('Content-Type:application/json charset=UTF-8');
+            header('Content-Length: 0',true);
+     
+            header('status: 204');
+            header('HTTP/1.0 204 No Content');
+        }
+     
+        if ($request_method === 'POST') {
+     
+            header('Access-Control-Allow-Origin:'.$origin);
+            header('Access-Control-Allow-Credentials:true');
+            header('Access-Control-Allow-Methods:GET, POST, OPTIONS');
+     
+        }
+     
+        if ($request_method === 'GET') {
+     
+            header('Access-Control-Allow-Origin:'.$origin);
+            header('Access-Control-Allow-Credentials:true');
+            header('Access-Control-Allow-Methods:GET, POST, OPTIONS');
+     
+        }
+     
     }
 }

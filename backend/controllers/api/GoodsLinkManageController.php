@@ -24,9 +24,12 @@ class GoodsLinkManageController extends BaseController
     public function actionList(){
         $pageSize = \Yii::$app->params['goods_link_page']['page_size'];
         $has_more = true;
-        $get = $this->I();
-        if(isset($get['page'])){
-            $page = $get['page'];
+        $req = $this->I();
+        if (Yii::$app->request->isPost){
+            $req = $this->jsonObj;
+        }
+        if(isset($req['page'])){
+            $page = $req['page'];
         }else{
             $page = 0;
         }

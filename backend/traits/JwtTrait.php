@@ -54,7 +54,8 @@ trait JwtTrait
         try {
             $decoded = JWT::decode($token, $secret, [static::getAlgo()]);
         } catch (\Exception $e) {
-            return false;
+            $err = $e->getMessage();
+            return $err;
         }
 
         static::$decodedToken = (array) $decoded;
@@ -68,7 +69,7 @@ trait JwtTrait
         // For more details: https://tools.ietf.org/html/rfc7519#section-4.1.7
         $id = static::$decodedToken['jti'];
 
-        return $id;
+        return true;
 
         // return static::findByJTI($id);
     }
@@ -130,10 +131,10 @@ trait JwtTrait
         // Merge token with presets not to miss any params in custom
         // configuration
         $token = array_merge([
-            'iss' => $hostInfo,
-            'aud' => $hostInfo,
-            'iat' => $currentTime,
-            'nbf' => $currentTime,
+            'iss' => $hostInfo,     //签发者
+            'aud' => $hostInfo,     //接收者
+            'iat' => $currentTime,  //在什么时候签发
+            'exp' => $currentTime+\Yii::$app->params['jwt']['exp_time'],  //在什么时候过期
         ], static::getHeaderToken());
         $jti = $this->getJTI();
         if(!$jti) return false;
@@ -144,10 +145,14 @@ trait JwtTrait
     }
 
     public function checkAuth(){
-        $post = $this->jsonObj;
+        $req = $_GET;
+        if (Yii::$app->request->isPost) $req = $this->jsonObj;
         $check = null;
-        $user = User::findByUsername($post['username']);
-        if($user) $check = $user->validatePassword($post['password']);
+        if(!isset($req['email']) || !isset($req['password'])){
+            return false;
+        }
+        $user = User::findByUsername($req['email']);
+        if($user) $check = $user->validatePassword($req['password']);
         if ($user && $check) {
             $userId = $user->uid;
             return $userId;
