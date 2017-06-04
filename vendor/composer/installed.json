@@ -52,101 +52,6 @@
         ]
     },
     {
-        "name": "bower-asset/jquery",
-        "version": "2.2.4",
-        "version_normalized": "2.2.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/jquery/jquery-dist.git",
-            "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/c0185ab7c75aab88762c5aae780b9d83b80eda72",
-            "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
-            "shasum": ""
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": "dist/jquery.js",
-            "bower-asset-ignore": [
-                "package.json"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ],
-        "keywords": [
-            "browser",
-            "javascript",
-            "jquery",
-            "library"
-        ]
-    },
-    {
-        "name": "bower-asset/jquery.inputmask",
-        "version": "3.3.5",
-        "version_normalized": "3.3.5.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/RobinHerbots/Inputmask.git",
-            "reference": "ed27356d1b22366be48c4e7b8d038b9649bd4ab0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/ed27356d1b22366be48c4e7b8d038b9649bd4ab0",
-            "reference": "ed27356d1b22366be48c4e7b8d038b9649bd4ab0",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/jquery": ">=1.7"
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": [
-                "./dist/inputmask/inputmask.js",
-                "./dist/inputmask/inputmask.extensions.js",
-                "./dist/inputmask/inputmask.date.extensions.js",
-                "./dist/inputmask/inputmask.numeric.extensions.js",
-                "./dist/inputmask/inputmask.phone.extensions.js",
-                "./dist/inputmask/inputmask.regex.extensions.js",
-                "./dist/inputmask/jquery.inputmask.js",
-                "./dist/inputmask/global/document.js",
-                "./dist/inputmask/global/window.js",
-                "./dist/inputmask/phone-codes/phone.js",
-                "./dist/inputmask/phone-codes/phone-be.js",
-                "./dist/inputmask/phone-codes/phone-nl.js",
-                "./dist/inputmask/phone-codes/phone-ru.js",
-                "./dist/inputmask/phone-codes/phone-uk.js",
-                "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.js",
-                "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js",
-                "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.js",
-                "./dist/inputmask/bindings/inputmask.binding.js"
-            ],
-            "bower-asset-ignore": [
-                "**/*",
-                "!dist/*",
-                "!dist/inputmask/*",
-                "!dist/min/*",
-                "!dist/min/inputmask/*"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "http://opensource.org/licenses/mit-license.php"
-        ],
-        "description": "jquery.inputmask is a jquery plugin which create an input mask.",
-        "keywords": [
-            "form",
-            "input",
-            "inputmask",
-            "jquery",
-            "mask",
-            "plugins"
-        ]
-    },
-    {
         "name": "ezyang/htmlpurifier",
         "version": "v4.9.2",
         "version_normalized": "4.9.2.0",
@@ -194,72 +99,6 @@
         "keywords": [
             "html"
         ]
-    },
-    {
-        "name": "bower-asset/yii2-pjax",
-        "version": "v2.0.6",
-        "version_normalized": "2.0.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/jquery-pjax.git",
-            "reference": "60728da6ade5879e807a49ce59ef9a72039b8978"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/60728da6ade5879e807a49ce59ef9a72039b8978",
-            "reference": "60728da6ade5879e807a49ce59ef9a72039b8978",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/jquery": ">=1.8"
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": "./jquery.pjax.js",
-            "bower-asset-ignore": [
-                ".travis.yml",
-                "Gemfile",
-                "Gemfile.lock",
-                "CONTRIBUTING.md",
-                "vendor/",
-                "script/",
-                "test/"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ]
-    },
-    {
-        "name": "bower-asset/punycode",
-        "version": "v1.3.2",
-        "version_normalized": "1.3.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/bestiejs/punycode.js.git",
-            "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/bestiejs/punycode.js/zipball/38c8d3131a82567bfef18da09f7f4db68c84f8a3",
-            "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3",
-            "shasum": ""
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": "punycode.js",
-            "bower-asset-ignore": [
-                "coverage",
-                "tests",
-                ".*",
-                "component.json",
-                "Gruntfile.js",
-                "node_modules",
-                "package.json"
-            ]
-        },
-        "installation-source": "dist"
     },
     {
         "name": "cebe/markdown",
@@ -423,57 +262,6 @@
         "keywords": [
             "framework",
             "yii2"
-        ]
-    },
-    {
-        "name": "bower-asset/bootstrap",
-        "version": "v3.3.7",
-        "version_normalized": "3.3.7.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/twbs/bootstrap.git",
-            "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/twbs/bootstrap/zipball/0b9c4a4007c44201dce9a6cc1a38407005c26c86",
-            "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/jquery": ">=1.9.1,<4.0"
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": [
-                "less/bootstrap.less",
-                "dist/js/bootstrap.js"
-            ],
-            "bower-asset-ignore": [
-                "/.*",
-                "_config.yml",
-                "CNAME",
-                "composer.json",
-                "CONTRIBUTING.md",
-                "docs",
-                "js/tests",
-                "test-infra"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ],
-        "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-        "keywords": [
-            "css",
-            "framework",
-            "front-end",
-            "js",
-            "less",
-            "mobile-first",
-            "responsive",
-            "web"
         ]
     },
     {
@@ -3206,35 +2994,6 @@
         ]
     },
     {
-        "name": "bower-asset/typeahead.js",
-        "version": "v0.11.1",
-        "version_normalized": "0.11.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/twitter/typeahead.js.git",
-            "reference": "588440f66559714280628a4f9799f0c4eb880a4a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/twitter/typeahead.js/zipball/588440f66559714280628a4f9799f0c4eb880a4a",
-            "reference": "588440f66559714280628a4f9799f0c4eb880a4a",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/jquery": ">=1.7"
-        },
-        "require-dev": {
-            "bower-asset/jasmine-ajax": "~1.3.1",
-            "bower-asset/jasmine-jquery": "~1.5.2",
-            "bower-asset/jquery": "~1.7"
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": "dist/typeahead.bundle.js"
-        },
-        "installation-source": "dist"
-    },
-    {
         "name": "phpspec/php-diff",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -5414,5 +5173,303 @@
             "jwt",
             "yii"
         ]
+    },
+    {
+        "name": "predis/predis",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nrk/predis.git",
+            "reference": "3acf867cacd3cbb95a4d920e64416d4e6051560d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://files.phpcomposer.com/files/nrk/predis/3acf867cacd3cbb95a4d920e64416d4e6051560d.zip",
+            "reference": "3acf867cacd3cbb95a4d920e64416d4e6051560d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.8"
+        },
+        "suggest": {
+            "ext-curl": "Allows access to Webdis when paired with phpiredis",
+            "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+        },
+        "time": "2016-11-22T14:33:03+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.0-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Predis\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Daniele Alessandri",
+                "email": "suppakilla@gmail.com",
+                "homepage": "http://clorophilla.net"
+            }
+        ],
+        "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+        "homepage": "http://github.com/nrk/predis",
+        "keywords": [
+            "nosql",
+            "predis",
+            "redis"
+        ]
+    },
+    {
+        "name": "bower-asset/jquery",
+        "version": "2.2.4",
+        "version_normalized": "2.2.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jquery/jquery-dist.git",
+            "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/c0185ab7c75aab88762c5aae780b9d83b80eda72",
+            "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
+            "shasum": ""
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": "dist/jquery.js",
+            "bower-asset-ignore": [
+                "package.json"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "keywords": [
+            "browser",
+            "javascript",
+            "jquery",
+            "library"
+        ]
+    },
+    {
+        "name": "bower-asset/bootstrap",
+        "version": "v3.3.7",
+        "version_normalized": "3.3.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twbs/bootstrap.git",
+            "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twbs/bootstrap/zipball/0b9c4a4007c44201dce9a6cc1a38407005c26c86",
+            "reference": "0b9c4a4007c44201dce9a6cc1a38407005c26c86",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.9.1,<4.0"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "less/bootstrap.less",
+                "dist/js/bootstrap.js"
+            ],
+            "bower-asset-ignore": [
+                "/.*",
+                "_config.yml",
+                "CNAME",
+                "composer.json",
+                "CONTRIBUTING.md",
+                "docs",
+                "js/tests",
+                "test-infra"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+        "keywords": [
+            "css",
+            "framework",
+            "front-end",
+            "js",
+            "less",
+            "mobile-first",
+            "responsive",
+            "web"
+        ]
+    },
+    {
+        "name": "bower-asset/jquery.inputmask",
+        "version": "3.3.5",
+        "version_normalized": "3.3.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/RobinHerbots/Inputmask.git",
+            "reference": "ed27356d1b22366be48c4e7b8d038b9649bd4ab0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/ed27356d1b22366be48c4e7b8d038b9649bd4ab0",
+            "reference": "ed27356d1b22366be48c4e7b8d038b9649bd4ab0",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.7"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "./dist/inputmask/inputmask.js",
+                "./dist/inputmask/inputmask.extensions.js",
+                "./dist/inputmask/inputmask.date.extensions.js",
+                "./dist/inputmask/inputmask.numeric.extensions.js",
+                "./dist/inputmask/inputmask.phone.extensions.js",
+                "./dist/inputmask/inputmask.regex.extensions.js",
+                "./dist/inputmask/jquery.inputmask.js",
+                "./dist/inputmask/global/document.js",
+                "./dist/inputmask/global/window.js",
+                "./dist/inputmask/phone-codes/phone.js",
+                "./dist/inputmask/phone-codes/phone-be.js",
+                "./dist/inputmask/phone-codes/phone-nl.js",
+                "./dist/inputmask/phone-codes/phone-ru.js",
+                "./dist/inputmask/phone-codes/phone-uk.js",
+                "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.js",
+                "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js",
+                "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.js",
+                "./dist/inputmask/bindings/inputmask.binding.js"
+            ],
+            "bower-asset-ignore": [
+                "**/*",
+                "!dist/*",
+                "!dist/inputmask/*",
+                "!dist/min/*",
+                "!dist/min/inputmask/*"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "http://opensource.org/licenses/mit-license.php"
+        ],
+        "description": "jquery.inputmask is a jquery plugin which create an input mask.",
+        "keywords": [
+            "form",
+            "input",
+            "inputmask",
+            "jquery",
+            "mask",
+            "plugins"
+        ]
+    },
+    {
+        "name": "bower-asset/punycode",
+        "version": "v1.3.2",
+        "version_normalized": "1.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bestiejs/punycode.js.git",
+            "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bestiejs/punycode.js/zipball/38c8d3131a82567bfef18da09f7f4db68c84f8a3",
+            "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3",
+            "shasum": ""
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": "punycode.js",
+            "bower-asset-ignore": [
+                "coverage",
+                "tests",
+                ".*",
+                "component.json",
+                "Gruntfile.js",
+                "node_modules",
+                "package.json"
+            ]
+        },
+        "installation-source": "dist"
+    },
+    {
+        "name": "bower-asset/yii2-pjax",
+        "version": "v2.0.6",
+        "version_normalized": "2.0.6.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yiisoft/jquery-pjax.git",
+            "reference": "60728da6ade5879e807a49ce59ef9a72039b8978"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/60728da6ade5879e807a49ce59ef9a72039b8978",
+            "reference": "60728da6ade5879e807a49ce59ef9a72039b8978",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.8"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": "./jquery.pjax.js",
+            "bower-asset-ignore": [
+                ".travis.yml",
+                "Gemfile",
+                "Gemfile.lock",
+                "CONTRIBUTING.md",
+                "vendor/",
+                "script/",
+                "test/"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "bower-asset/typeahead.js",
+        "version": "v0.11.1",
+        "version_normalized": "0.11.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twitter/typeahead.js.git",
+            "reference": "588440f66559714280628a4f9799f0c4eb880a4a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twitter/typeahead.js/zipball/588440f66559714280628a4f9799f0c4eb880a4a",
+            "reference": "588440f66559714280628a4f9799f0c4eb880a4a",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.7"
+        },
+        "require-dev": {
+            "bower-asset/jasmine-ajax": "~1.3.1",
+            "bower-asset/jasmine-jquery": "~1.5.2",
+            "bower-asset/jquery": "~1.7"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": "dist/typeahead.bundle.js"
+        },
+        "installation-source": "dist"
     }
 ]

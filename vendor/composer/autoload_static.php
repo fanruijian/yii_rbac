@@ -107,6 +107,7 @@ class ComposerStaticInit77cbebd1b8ec1f422994c8c2c225df37
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Predis\\' => 7,
         ),
         'L' => 
         array (
@@ -366,6 +367,10 @@ class ComposerStaticInit77cbebd1b8ec1f422994c8c2c225df37
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Predis\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/predis/predis/src',
         ),
         'League\\Url\\' => 
         array (
